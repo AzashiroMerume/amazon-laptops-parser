@@ -1,6 +1,5 @@
 import { Schema, model } from 'mongoose'
 
-
 const schema = new Schema({
     name: {
         type: String,
@@ -16,4 +15,4 @@ const schema = new Schema({
     },
 })
 
-module.exports = model('Laptops', schema)
+export const laptops = model('laptops', schema)
