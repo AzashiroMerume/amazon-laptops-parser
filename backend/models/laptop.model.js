@@ -3,7 +3,6 @@ import { Schema, model } from 'mongoose'
 const schema = new Schema({
 
     id: String,
-    brand: String,
     name: String,
     price: String,
     rating: String,

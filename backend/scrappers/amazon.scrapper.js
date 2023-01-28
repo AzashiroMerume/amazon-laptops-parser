@@ -17,7 +17,6 @@ export default async function scrapLaptopsFromAmazon(fromEveryPage = false) {
                 const id = $(el).attr('data-asin');
                 const existing = await laptop.findOne({ id });
                 if (!existing) {
-                    const brand = $(el).find('h5 .a-size-base-plus').text();
                     const name = $(el).find('h2 span').text();
                     const price = $(el).find('.a-price-whole').text();
                     const rating = $(el).find('.a-spacing-top-micro span').attr('aria-label');
@@ -25,7 +24,6 @@ export default async function scrapLaptopsFromAmazon(fromEveryPage = false) {
                     const link = 'https://www.amazon.com' + $(el).find('.a-link-normal').attr('href');
                     laptop.create({
                         id: id,
-                        brand: brand,
                         name: name,
                         price: price,
                         rating: rating,
