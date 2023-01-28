@@ -1,6 +1,6 @@
 import { Router } from "express"
 import mongoose from "mongoose"
-import { laptops } from "../models/laptops.model.js"
+import { laptop } from "../models/laptop.model.js"
 
 const router = Router()
 
